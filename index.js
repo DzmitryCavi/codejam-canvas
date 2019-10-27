@@ -1,10 +1,11 @@
 
 var canvas = document.querySelector("canvas"), 
-ctx = canvas.getContext("2d"),
-width = n, 
-height = n, 
-scale = canvas.width / n; 
+ctx = canvas.getContext("2d");
+
 function draw(n,data){
+    let width = n, 
+    height = n, 
+    scale = canvas.width / n; 
     fetch(data)
         .then(response => response.json())
         .then(cdata => {
