@@ -43,7 +43,7 @@ let matrix4 = document.getElementById('set_4x4');
 let png = document.getElementById('set_png');
 matrix4.addEventListener('click', draw(4,'data/4x4.json'));
 matrix32.addEventListener('click', draw(32,'data/32x32.json'));
-png.addEventListener('click', drawPNG());gi
+png.addEventListener('click', drawPNG());
 /*
 function loadJSON(callback) {   
 
