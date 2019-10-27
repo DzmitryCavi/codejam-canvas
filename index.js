@@ -1,11 +1,10 @@
 
+var canvas = document.querySelector("canvas"), 
+ctx = canvas.getContext("2d"),
+width = n, 
+height = n, 
+scale = canvas.width / n; 
 function draw(n,data){
-    let canvas = document.querySelector("canvas"), 
-        ctx = canvas.getContext("2d"),
-        width = n, 
-        height = n, 
-        scale = canvas.width / n; 
-    
     fetch(data)
         .then(response => response.json())
         .then(cdata => {
@@ -42,8 +41,8 @@ let matrix32 = document.getElementById('set_32x32');
 let matrix4 = document.getElementById('set_4x4');
 let png = document.getElementById('set_png');
 matrix4.addEventListener('click', draw(4,'data/4x4.json'));
-matrix32.addEventListener('click', draw(4,'data/32x32.json'));
-png.addEventListener('click', drawPNG());
+matrix32.addEventListener('click', draw(32,'data/32x32.json'));
+png.addEventListener('click', drawPNG());gi
 /*
 function loadJSON(callback) {   
 
