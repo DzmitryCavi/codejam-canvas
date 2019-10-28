@@ -33,7 +33,7 @@ function draw(n,data){
  function drawPNG(){
     const img = new Image(canvas.width, canvas.height);
     img.onload = ()=>{
-        ctx.drawImage(img, 0, 0);
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
     }
     img.src = 'data/image.png';
 }
@@ -41,9 +41,9 @@ function draw(n,data){
 let matrix32 = document.getElementById('set_32x32');
 let matrix4 = document.getElementById('set_4x4');
 let png = document.getElementById('set_png');
-matrix4.addEventListener('click', draw(4,'data/4x4.json'));
-matrix32.addEventListener('click', draw(32,'data/32x32.json'));
-png.addEventListener('click', drawPNG());
+matrix4.addEventListener('click', ()=>{draw(4,'data/4x4.json')});
+matrix32.addEventListener('click', ()=>{draw(32,'data/32x32.json')} );
+png.addEventListener('click', drawPNG);
 /*
 function loadJSON(callback) {   
 
